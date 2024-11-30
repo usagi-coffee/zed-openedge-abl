@@ -22,24 +22,16 @@
 (return_type
   type: (_) @type)
 
-; Single-statements like QUIT
-(abl_statement
-  statement: (identifier) @keyword)
-
-; Rest of the statements
 (abl_statement
   statement: (identifier) @keyword
-  (identifier) @keyword)
+  (identifier)? @keyword)
 
 (function_statement
   name: (identifier) @function.definition)
 
 (function_call
-  function: (identifier) @function.call)
-
-(function_call
   function: (identifier) @function.call
-  (arguments "," @punctuation))
+  (arguments "," @punctuation)?)
 
 ; Even though TODAY is a function it can be used as literal TODAY, so we need to match it as a keyword
 (
