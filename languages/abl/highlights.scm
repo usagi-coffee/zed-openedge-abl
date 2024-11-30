@@ -1,26 +1,21 @@
-;; Highlight comments
 (comment) @comment
-
 (include) @primary
+(constant) @constant
 
-;; Highlight variable
-(identifier) @variable
-
-;; Highlight strings
 (string_literal) @string
-
-;; Highlight numbers
 (number_literal) @number
 
-;; Highlight identifiers
 (identifier) @variable
 (qualified_name) @variable
 
-(constant) @constant
+(object_access
+  object: (identifier) @primary
+  property: (identifier) @property
+)
 
-;; Highlight variable definitions
-(abl_statement
-  statement: (identifier) @keyword
+(member_access
+  object: (identifier) @primary
+  property: (identifier) @property
 )
 
 (type_tuning
@@ -29,13 +24,29 @@
 (return_type
   type: (_) @type)
 
-;; Highlight function definitions
-(function_statement
-  name: (identifier) @function.definition
+; Single-statements like QUIT
+(abl_statement
+  statement: (identifier) @keyword
 )
+
+; Rest of the statements
+(abl_statement
+  statement: (identifier) @keyword
+  (identifier) @keyword
+)
+
+(function_statement
+  name: (identifier) @function.definition)
 
 (function_call
   function: (identifier) @function.call
+  (arguments "," @punctuation)
+)
+
+; Even though TODAY is a function it can be used as literal TODAY, so we need to match it as a keyword
+(
+  (identifier) @keyword
+  (#match? @keyword "[T-t][O-o][D-d][A-a][Y-y]")
 )
 
 ; Tokens
