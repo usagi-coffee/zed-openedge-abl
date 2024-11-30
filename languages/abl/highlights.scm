@@ -62,6 +62,13 @@
 ] @operator
 
 [
+  "YES"
+  "NO"
+  "TRUE"
+  "FALSE"
+] @boolean
+
+[
   "ABSTRACT"
   "ACCUM"
   "ACCUMULATE"
@@ -142,7 +149,6 @@
   "EXCEPT"
   "EXCLUSIVE-LOCK"
   "EXTENT"
-  "FALSE"
   "FGCOLOR"
   "FIELD"
   "FIELDS"
@@ -203,7 +209,6 @@
   "MOUSE-POINTER"
   "NEW"
   "NEXT"
-  "NO"
   "NO-APPLY"
   "NO-CONVERT"
   "NO-CONVERT-3D-COLORS"
@@ -295,7 +300,6 @@
   "TOOLTIP"
   "TOTAL"
   "TRANSACTION"
-  "TRUE"
   "UNBUFFERED"
   "UNDO"
   "UNIQUE"
@@ -317,7 +321,5 @@
   "XML-DATA-TYPE"
   "XML-NODE-NAME"
   "XML-NODE-TYPE"
-  "Y"
-  "YES"
   (null_expression)
 ] @keyword
