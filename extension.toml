@@ -1,0 +1,12 @@
+id = "zed-openedge-abl"
+name = "OpenEdge ABL"
+version = "0.0.1"
+schema_version = 1
+authors = ["Kamil Jakubus <kamil.jakubus@usagi.coffee>"]
+description = "OpenEdge ABL support"
+repository = "https://github.com/usagi-coffee/zed-openedge-abl"
+
+[grammars.abl]
+repository = "https://github.com/usagi-coffee/tree-sitter-abl"
+commit = "51b237a136014566f1ff744f68d0c8262ab8f726"
+
