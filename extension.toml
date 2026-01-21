@@ -8,6 +8,5 @@ repository = "https://github.com/usagi-coffee/zed-openedge-abl"
 languages = ["languages/abl"]
 
 [grammars.abl]
-repository = "https://github.com/usagi-coffee/tree-sitter-abl"
-commit = "51b237a136014566f1ff744f68d0c8262ab8f726"
-
+repository = "https://github.com/jkbz64/tree-sitter-abl-next.git"
+rev = "0e0af180cc2201509e54c23b3c02f3e401865eb1"
