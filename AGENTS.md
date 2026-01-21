@@ -15,4 +15,5 @@
 - Prefer small, focused changes; avoid reformatting unrelated files.
 - If updating grammar or queries, align changes with `extension.toml` and the language `config.toml` in `languages/`.
 - Use `docs/language.md` as the source of truth for Zed language extension behavior, including language server guidance.
+- Do *NOT* modify `grammars/abl` directory, it's read-only for you to understand ast better
 
