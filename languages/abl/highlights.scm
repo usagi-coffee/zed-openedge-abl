@@ -3,7 +3,9 @@
 (block_comment) @comment
 (preprocessor_directive) @preproc
 (include) @constant
+(include_extra) @constant
 (constant) @constant
+(constant_extra) @constant
 (argument_reference) @constant
 (null_literal) @constant
 (boolean_literal) @boolean
@@ -197,10 +199,21 @@
 (function_forward_definition name: (identifier) @function)
 (procedure_definition name: (identifier) @function)
 (procedure_forward_definition name: (identifier) @function)
-(function_call function: (identifier) @function)
-(function_call function: (qualified_name) @function)
-(function_call function: (object_access) @function)
-(function_call function: (scoped_name) @function)
+(function_call
+  function: (identifier) @function
+  (#set! priority 100))
+(function_call
+  function: (qualified_name) @function
+  (#set! priority 100))
+(function_call
+  function: (object_access) @function
+  (#set! priority 100))
+(function_call
+  function: (scoped_name) @function
+  (#set! priority 100))
+(qualified_name
+  (identifier) @type
+  (identifier))
 (run_statement procedure: (procedure_name) @function)
 (run_statement procedure: (identifier) @function)
 (run_statement procedure: (qualified_name) @function)
@@ -208,6 +221,8 @@
 (parameter_definition name: (identifier) @variable)
 (variable_definition name: (identifier) @variable)
 (buffer_definition name: (identifier) @variable)
+(buffer_definition table: (identifier) @type)
+(buffer_definition table: (qualified_name) @type)
 (stream_definition name: (identifier) @variable)
 (query_definition name: (identifier) @variable)
 (image_definition name: (identifier) @variable)
@@ -217,6 +232,11 @@
 (work_table_field name: (identifier) @property)
 (temp_table_index name: (identifier) @property)
 (work_table_index name: (identifier) @property)
+(available_expression record: (identifier) @type)
+(available_expression record: (qualified_name) @type)
+(object_access
+  (identifier) @type
+  (identifier))
 (_ type: (_) @type)
 (access_modifier) @keyword
 (static_modifier) @keyword
