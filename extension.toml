@@ -5,6 +5,7 @@ schema_version = 1
 authors = ["Kamil Jakubus <kamil.jakubus@usagi.coffee>"]
 description = "OpenEdge ABL support"
 repository = "https://github.com/usagi-coffee/zed-openedge-abl"
+languages = ["languages/abl"]
 
 [grammars.abl]
 repository = "https://github.com/usagi-coffee/tree-sitter-abl"
