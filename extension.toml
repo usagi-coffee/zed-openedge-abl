@@ -7,6 +7,10 @@ description = "OpenEdge ABL support"
 repository = "https://github.com/usagi-coffee/zed-openedge-abl"
 languages = ["languages/abl"]
 
+[language_servers.abl-language-server]
+name = "ABL Language Server"
+language = "OpenEdge ABL"
+
 [grammars.abl]
 repository = "https://github.com/usagi-coffee/tree-sitter-abl"
 rev = "dbc5e792b1b0306b4e0fa8d467272189a8196759"

@@ -2,3 +2,5 @@ grammars
 example.ast
 example.p
 procedures/
+target
+extension.wasm
