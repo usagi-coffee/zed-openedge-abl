@@ -1,6 +1,6 @@
 ; Auto-indentation rules for OpenEdge ABL
 (do_block "END" @end) @indent
-(for_each_statement "END" @end) @indent
+(for_statement "END" @end) @indent
 (repeat_statement "END" @end) @indent
 (case_statement "END" @end) @indent
 (catch_statement "END" @end) @indent
@@ -11,5 +11,4 @@
 (method_body "END" @end) @indent
 (constructor_body "END" @end) @indent
 (destructor_body "END" @end) @indent
-(property_accessor "END" @end) @indent
 (enum_statement "END" @end) @indent
