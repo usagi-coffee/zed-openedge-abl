@@ -6,6 +6,35 @@ struct AblExtension {
 }
 
 impl AblExtension {
+    fn is_file_or_symlink(path: &str) -> bool {
+        fs::symlink_metadata(path).map_or(false, |stat| {
+            let file_type = stat.file_type();
+            file_type.is_file() || file_type.is_symlink()
+        })
+    }
+
+    fn find_symlinked_binary(binary_name: &str) -> Option<PathBuf> {
+        let entries = fs::read_dir(".").ok()?;
+        for entry in entries.flatten() {
+            let name = entry.file_name();
+            let Some(name) = name.to_str() else {
+                continue;
+            };
+
+            if !name.starts_with("abl-language-server-") {
+                continue;
+            }
+
+            let candidate = entry.path().join(binary_name);
+            if fs::symlink_metadata(&candidate).map_or(false, |stat| stat.file_type().is_symlink())
+            {
+                return Some(candidate);
+            }
+        }
+
+        None
+    }
+
     fn language_server_binary_path(
         &mut self,
         language_server_id: &LanguageServerId,
@@ -61,19 +90,35 @@ impl AblExtension {
                 ""
             }
         );
+
+        // If the currently selected binary is symlinked, treat it as externally managed
+        // and skip auto-updates/downloads.
+        if let Some(cached_path) = &self.cached_binary_path {
+            if fs::symlink_metadata(cached_path).map_or(false, |stat| stat.file_type().is_symlink())
+            {
+                return Ok(cached_path.clone());
+            }
+        }
+
+        // Also support extension restarts by detecting symlink-managed binaries on disk.
+        if let Some(symlinked_binary) = Self::find_symlinked_binary(&binary_name) {
+            self.cached_binary_path = Some(symlinked_binary.clone());
+            return Ok(symlinked_binary);
+        }
+
         let binary_path = format!("{version_dir}/{binary_name}");
 
         // Check if we already have this version
         if let Some(cached_path) = &self.cached_binary_path {
             if cached_path.to_str() == Some(&binary_path)
-                && fs::metadata(&binary_path).map_or(false, |stat| stat.is_file())
+                && Self::is_file_or_symlink(&binary_path)
             {
                 return Ok(cached_path.clone());
             }
         }
 
         // Download if we don't have this version
-        if !fs::metadata(&binary_path).map_or(false, |stat| stat.is_file()) {
+        if !Self::is_file_or_symlink(&binary_path) {
             zed::set_language_server_installation_status(
                 language_server_id,
                 &zed::LanguageServerInstallationStatus::Downloading,
