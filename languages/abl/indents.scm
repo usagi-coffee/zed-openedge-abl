@@ -8,7 +8,4 @@
 (function_definition "END" @end) @indent
 (class_definition "END" @end) @indent
 (interface_definition "END" @end) @indent
-(method_body "END" @end) @indent
-(constructor_body "END" @end) @indent
-(destructor_body "END" @end) @indent
 (enum_statement "END" @end) @indent

@@ -27,7 +27,9 @@
 (procedure_forward_definition name: (identifier) @function)
 (include_named_argument name: (identifier) @attribute)
 (include_named_argument name: (identifier) @parameter)
-(variable_definition name: (identifier) @variable)
+(variable_definition
+    name: (identifier) @variable
+    type: (identifier) @constant)
 
 ; Definition keywords
 (no_lock) @keyword
@@ -219,6 +221,7 @@
   "EXTENDED"
   "EXTENT"
   "EXTERNAL"
+  "FALSE"
   "FGCOLOR"
   "FIELD"
   "FIELDS"
@@ -352,6 +355,7 @@
   "NEW-INSTANCE"
   "NEXT"
   "NEXT-PROMPT"
+  "NO"
   "NO-APPLY"
   "NO-ARRAY-MESSAGE"
   "NO-ATTR-LIST"
@@ -594,6 +598,7 @@
   "TRIGGER"
   "TRIGGERS"
   "TRIM"
+  "TRUE"
   "TTCODEPAGE"
   "UNBUFFERED"
   "UNDERLINE"
