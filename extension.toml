@@ -5,7 +5,7 @@ schema_version = 1
 authors = ["Kamil Jakubus <kamil.jakubus@usagi.coffee>"]
 description = "OpenEdge ABL support"
 repository = "https://github.com/usagi-coffee/zed-openedge-abl"
-languages = ["languages/abl"]
+languages = ["languages/abl", "languages/df"]
 
 [language_servers.abl-language-server]
 name = "ABL Language Server"
@@ -14,3 +14,7 @@ language = "OpenEdge ABL"
 [grammars.abl]
 repository = "https://github.com/usagi-coffee/tree-sitter-abl"
 rev = "ab8c0ed8dc5bcd452d3f0cd82f6bc04e327ecdc9"
+
+[grammars.df]
+repository = "https://github.com/usagi-coffee/tree-sitter-df"
+rev = "70b8fea717a135b8e82721f3c5976c81756b8e9e"
