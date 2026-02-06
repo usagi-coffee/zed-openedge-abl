@@ -1,4 +1,4 @@
 name = "OpenEdge ABL"
 grammar = "abl"
-path_suffixes = ["p", "cls"]
+path_suffixes = ["p", "cls", "i"]
 line_comments = ["// ", "/* "]

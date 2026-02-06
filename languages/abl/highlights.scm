@@ -27,9 +27,26 @@
 (procedure_forward_definition name: (identifier) @function)
 (include_named_argument name: (identifier) @attribute)
 (include_named_argument name: (identifier) @parameter)
+(buffer_definition table: (identifier) @type)
+(buffer_definition table: (qualified_name) @type)
 (variable_definition
     name: (identifier) @variable
     type: (identifier) @constant)
+(function_call
+  function: (identifier) @function
+  (#set! priority 100))
+(function_call
+  function: (qualified_name) @function
+  (#set! priority 100))
+(function_call
+  function: (object_access) @function
+  (#set! priority 100))
+(function_call
+  function: (scoped_name) @function
+  (#set! priority 100))
+(qualified_name
+  (identifier) @type
+  (identifier))
 
 ; Definition keywords
 (no_lock) @keyword

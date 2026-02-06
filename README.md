@@ -8,6 +8,4 @@ Currently the only way to install the extension is to use Zed's `Install Dev Ext
 
 ```
 git clone https://github.com/usagi-coffee/zed-openedge-abl
-# Use `Install Dev Extension` on the cloned directory inside Zed Extension Page
-# Be patient, it might take a while to compile the grammar.
 ```
