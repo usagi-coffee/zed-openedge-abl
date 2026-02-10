@@ -24,7 +24,6 @@
 (function_definition name: (identifier) @function)
 (function_forward_definition name: (identifier) @function)
 (procedure_definition name: (identifier) @function)
-(procedure_forward_definition name: (identifier) @function)
 (include_named_argument name: (identifier) @attribute)
 (include_named_argument name: (identifier) @parameter)
 (buffer_definition table: (identifier) @type)
