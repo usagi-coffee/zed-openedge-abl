@@ -52,6 +52,204 @@
 (no_undo) @keyword
 
 [
+  (abstract)
+  (abstract_modifier)
+  (access_modifier)
+  (all)
+  (allow_replication)
+  (ansi_only)
+  (anywhere)
+  (append)
+  (array_message)
+  (ask_overwrite)
+  (attr_space)
+  (auto_endkey)
+  (auto_go)
+  (auto_return)
+  (background)
+  (backwards)
+  (before_hide)
+  (binary)
+  (bind)
+  (bind_where)
+  (blank)
+  (break)
+  (byte)
+  (by_reference)
+  (by_value)
+  (case_sensitive)
+  (cdecl)
+  (centered)
+  (chained)
+  (clear)
+  (clipboard)
+  (close)
+  (collate)
+  (compares)
+  (convert_3d_colors)
+  (create_test_file)
+  (current)
+  (cursor)
+  (data_bind)
+  (deblank)
+  (default)
+  (disabled)
+  (disable_auto_zap)
+  (display)
+  (down)
+  (drop_down)
+  (drop_down_list)
+  (drop_target)
+  (echo)
+  (exclusive)
+  (exclusive_lock)
+  (explicit)
+  (final)
+  (final_modifier)
+  (first)
+  (fit_last_column)
+  (fixed_only)
+  (flags)
+  (flat_button)
+  (foreign_key_hidden)
+  (forward)
+  (forwards)
+  (from_current)
+  (generate_md5)
+  (graphic_edge)
+  (group_box)
+  (header)
+  (indexed_reposition)
+  (index_hint)
+  (join_by_sqldb)
+  (keep_messages)
+  (landscape)
+  (large)
+  (last)
+  (lookahead)
+  (menubar)
+  (message)
+  (moveable)
+  (multiple)
+  (must_exist)
+  (nested)
+  (new)
+  (new_instance)
+  (new_modifier)
+  (next)
+  (not)
+  (not_active)
+  (no_apply)
+  (no_array_message)
+  (no_assign)
+  (no_attr_list)
+  (no_attr_space)
+  (no_bind_where)
+  (no_box)
+  (no_column_scrolling)
+  (no_convert)
+  (no_convert_3d_colors)
+  (no_debug)
+  (no_echo)
+  (no_empty_space)
+  (no_error)
+  (no_fill)
+  (no_focus)
+  (no_hide)
+  (no_index_hint)
+  (no_join_by_sqldb)
+  (no_label)
+  (no_labels)
+  (no_lobs)
+  (no_lock)
+  (no_lookahead)
+  (no_map)
+  (no_message)
+  (no_pause)
+  (no_prefetch)
+  (no_row_markers)
+  (no_separate_connection)
+  (no_tab_stop)
+  (no_undo)
+  (no_validate)
+  (no_wait)
+  (no_word_wrap)
+  (ordered_join)
+  (overlay)
+  (override)
+  (override_modifier)
+  (paged)
+  (page_bottom)
+  (page_top)
+  (pascal)
+  (performance)
+  (persistent)
+  (portrait)
+  (preselect)
+  (prev)
+  (primary)
+  (rcode_information)
+  (recursive)
+  (reference_only)
+  (replace)
+  (reposition)
+  (resizable)
+  (retain_shape)
+  (return_to_start_dir)
+  (reverse_from)
+  (rounded)
+  (row)
+  (rule)
+  (save_as)
+  (scope_modifier)
+  (scrollbar_horizontal)
+  (scrollbar_vertical)
+  (scrolling)
+  (separate_connection)
+  (separators)
+  (serializable)
+  (serialization_modifier)
+  (serialize_hidden)
+  (share)
+  (share_lock)
+  (side_labels)
+  (silent)
+  (simple)
+  (skip)
+  (skip_group_duplicates)
+  (sort)
+  (space)
+  (sql)
+  (static_modifier)
+  (stdcall)
+  (stream_io)
+  (stretch_to_fit)
+  (submenu_help)
+  (table_scan)
+  (terminal)
+  (text)
+  (this_object)
+  (this_procedure)
+  (thread_safe)
+  (three_d)
+  (transaction)
+  (transparent)
+  (trim)
+  (unbuffered)
+  (unformatted)
+  (unique)
+  (unique_match)
+  (unless_hidden)
+  (up)
+  (use_filename)
+  (use_revvideo)
+  (use_text)
+  (use_underline)
+  (use_widget_pool)
+  (validate)
+  (verbose)
+  (word_index)
+  "ABSTRACT"
   "ACCELERATOR"
   "ACCUM"
   "ACCUMULATE"
@@ -60,42 +258,28 @@
   "ALERT-BOX"
   "ALIAS"
   "ALL"
-  "ALLOW-REPLICATION"
   "AMBIGUOUS"
   "AND"
-  "ANSI-ONLY"
-  "ANYWHERE"
   "APPEND"
   "APPLICATION"
   "APPLY"
-  "ARRAY-MESSAGE"
   "AS"
   "ASCENDING"
-  "ASK-OVERWRITE"
   "ASSEMBLY"
   "ASSIGN"
   "ASYNCHRONOUS"
   "AT"
-  "ATTR-SPACE"
   "AUTO-COMPLETION"
-  "AUTO-ENDKEY"
-  "AUTO-GO"
   "AUTO-RETURN"
   "AUTOMATIC"
   "AVAIL"
   "AVAILABLE"
   "AVERAGE"
-  "BACKGROUND"
-  "BACKWARDS"
   "BASE-KEY"
-  "BEFORE-HIDE"
   "BEFORE-TABLE"
   "BEGINS"
   "BELL"
   "BGCOLOR"
-  "BINARY"
-  "BIND"
-  "BIND-WHERE"
   "BLANK"
   "BLINK-"
   "BLOCK-LEVEL"
@@ -114,17 +298,12 @@
   "BUTTONS"
   "BY"
   "BY-REFERENCE"
-  "BY-VALUE"
-  "BYTE"
   "CACHE"
   "CACHE-SIZE"
   "CALL"
   "CAN-FIND"
   "CASE"
-  "CASE-SENSITIVE"
   "CATCH"
-  "CDECL"
-  "CHAINED"
   "CHOOSE"
   "CLASS"
   "CLEAR"
@@ -150,7 +329,6 @@
   "COLUMNS"
   "COMBO-BOX"
   "COMMAND"
-  "COMPARES"
   "COMPILE"
   "COMPILER"
   "COMPLETE"
@@ -160,16 +338,13 @@
   "CONTROL"
   "CONTROL-FRAME"
   "CONVERT"
-  "CONVERT-3D-COLORS"
   "COPY-LOB"
   "COUNT"
   "CREATE"
-  "CREATE-TEST-FILE"
   "CURRENT"
   "CURRENT-CHANGED"
   "CURRENT-WINDOW"
   "CURSOR"
-  "DATA-BIND"
   "DATA-RELATION"
   "DATA-SOURCE"
   "DATABASE"
@@ -197,19 +372,14 @@
   "DIR"
   "DISABLE"
   "DISABLE-AUTO-ZAP"
-  "DISABLED"
   "DISCONNECT"
   "DISPLAY"
   "DO"
   "DOS"
   "DOWN"
-  "DROP-DOWN"
-  "DROP-DOWN-LIST"
-  "DROP-TARGET"
   "DUMP"
   "DYNAMIC-NEW"
   "EACH"
-  "ECHO"
   "EDGE-CHARS"
   "EDGE-PIXELS"
   "EDITING"
@@ -218,6 +388,7 @@
   "EMPTY"
   "ENABLE"
   "END"
+  "END-KEY"
   "ENDKEY"
   "ENTRY"
   "ENUM"
@@ -232,7 +403,6 @@
   "EXCEPT"
   "EXCLUSIVE-LOCK"
   "EXPAND"
-  "EXPLICIT"
   "EXPORT"
   "EXTENDED"
   "EXTENT"
@@ -248,36 +418,25 @@
   "FINALLY"
   "FIND"
   "FIRST"
-  "FIT-LAST-COLUMN"
   "FIX-CODEPAGE"
-  "FIXED-ONLY"
-  "FLAGS"
-  "FLAT-BUTTON"
   "FOCUS"
   "FONT"
   "FONT-TABLE"
   "FOR"
-  "FOREIGN-KEY-HIDDEN"
   "FORM"
   "FORMAT"
-  "FORWARD"
-  "FORWARDS"
   "FRAME"
   "FREQUENCY"
   "FROM"
-  "FROM-CURRENT"
   "FUNCTION"
   "GE"
-  "GENERATE-MD5"
   "GET"
   "GET-DIR"
   "GET-FILE"
   "GET-KEY-VALUE"
   "GO-ON"
-  "GRAPHIC-EDGE"
-  "GROUP-BOX"
+  "GROUP"
   "GT"
-  "HEADER"
   "HELP"
   "HIDE"
   "HORIZONTAL"
@@ -293,8 +452,6 @@
   "IMPORT"
   "IN"
   "INDEX"
-  "INDEX-HINT"
-  "INDEXED-REPOSITION"
   "INHERITS"
   "INITIAL"
   "INITIAL-DIR"
@@ -308,8 +465,6 @@
   "INTO"
   "IS"
   "ITEM"
-  "JOIN-BY-SQLDB"
-  "KEEP-MESSAGES"
   "KEY"
   "KEYS"
   "LABEL"
@@ -318,7 +473,6 @@
   "LABEL-FGCOLOR"
   "LABEL-FONT"
   "LABEL-PFCOLOR"
-  "LANDSCAPE"
   "LANGUAGES"
   "LARGE"
   "LARGE-TO-SMALL"
@@ -338,7 +492,6 @@
   "LOAD-RESULT-INTO"
   "LOB-DIR"
   "LOCKED"
-  "LOOKAHEAD"
   "LT"
   "MAP"
   "MATCHES"
@@ -359,57 +512,29 @@
   "MOD"
   "MODULO"
   "MOUSE-POINTER"
-  "MOVEABLE"
   "MULTIPLE"
-  "MUST-EXIST"
   "NAMESPACE-PREFIX"
   "NAMESPACE-URI"
   "NATIVE"
   "NE"
-  "NESTED"
   "NEW"
-  "NEW-INSTANCE"
   "NEXT"
   "NEXT-PROMPT"
   "NO"
   "NO-APPLY"
-  "NO-ARRAY-MESSAGE"
-  "NO-ATTR-LIST"
-  "NO-ATTR-SPACE"
-  "NO-BIND-WHERE"
   "NO-BOX"
-  "NO-COLUMN-SCROLLING"
   "NO-CONSOLE"
-  "NO-CONVERT"
-  "NO-CONVERT-3D-COLORS"
   "NO-CURRENT-VALUE"
-  "NO-DEBUG"
   "NO-DRAG"
-  "NO-ECHO"
-  "NO-EMPTY-SPACE"
   "NO-ERROR"
-  "NO-FILL"
-  "NO-FOCUS"
-  "NO-INDEX-HINT"
-  "NO-JOIN-BY-SQLDB"
   "NO-LABELS"
-  "NO-LOBS"
   "NO-LOCK"
-  "NO-LOOKAHEAD"
-  "NO-MAP"
-  "NO-MESSAGE"
-  "NO-PAUSE"
-  "NO-PREFETCH"
-  "NO-ROW-MARKERS"
-  "NO-SEPARATE-CONNECTION"
   "NO-TAB-STOP"
-  "NO-UNDO"
   "NO-WAIT"
   "NO-WORD-WRAP"
   "NONE"
   "NORMAL"
   "NOT"
-  "NOT-ACTIVE"
   "NUM-COPIES"
   "OBJECT"
   "OF"
@@ -422,7 +547,6 @@
   "OPTIONS"
   "OPTIONS-FILE"
   "OR"
-  "ORDERED-JOIN"
   "ORDINAL"
   "OS-APPEND"
   "OS-COMMAND"
@@ -435,30 +559,23 @@
   "OUTER-JOIN"
   "OUTPUT"
   "OVERLAY"
-  "OVERRIDE"
   "PAGE"
   "PAGE-SIZE"
   "PAGE-WIDTH"
-  "PAGED"
   "PARAM"
   "PARAMETER"
   "PARENT-FIELDS-AFTER"
   "PARENT-FIELDS-BEFORE"
   "PARENT-ID-FIELD"
   "PARENT-ID-RELATION"
-  "PASCAL"
   "PAUSE"
-  "PERFORMANCE"
   "PERSISTENT"
   "PFCOLOR"
-  "PORTRAIT"
   "PREPROCESS"
   "PRESELECT"
   "PREV"
-  "PRIMARY"
   "PRINTER"
   "PRINTER-SETUP"
-  "PRIVATE"
   "PROC-HANDLE"
   "PROC-STATUS"
   "PROCEDURE"
@@ -468,8 +585,6 @@
   "PROMSGS"
   "PROPATH"
   "PROPERTY"
-  "PROTECTED"
-  "PUBLIC"
   "PUBLISH"
   "PUT"
   "PUT-KEY-VALUE"
@@ -480,41 +595,29 @@
   "RADIO-SET"
   "RAW-TRANSFER"
   "RCODE-INFO"
-  "RCODE-INFORMATION"
   "READKEY"
   "RECID"
   "RECTANGLE"
-  "RECURSIVE"
-  "REFERENCE-ONLY"
   "RELATION-FIELDS"
   "RELEASE"
   "REPEAT"
-  "REPLACE"
   "REPOSITION"
-  "RESIZABLE"
   "RESULT"
-  "RETAIN-SHAPE"
   "RETRY"
   "RETRY-CANCEL"
   "RETURN"
-  "RETURN-TO-START-DIR"
   "RETURNS"
-  "REVERSE-FROM"
   "REVERT"
   "RIGHT"
   "RIGHT-ALIGNED"
-  "ROUNDED"
   "ROUTINE-LEVEL"
   "ROW"
   "ROW-OF"
   "ROWID"
-  "RULE"
   "RUN"
   "RUN-PROCEDURE"
   "RVV-"
-  "SAFE"
   "SAVE"
-  "SAVE-AS"
   "SAX-ATTRIBUTES"
   "SAX-READER"
   "SAX-WRITER"
@@ -522,13 +625,10 @@
   "SCROLL"
   "SCROLLBAR-HORIZONTAL"
   "SCROLLBAR-VERTICAL"
-  "SCROLLING"
   "SECTION"
+  "SEEK"
   "SELECTION-LIST"
   "SELF"
-  "SEPARATE-CONNECTION"
-  "SEPARATORS"
-  "SERIALIZE-HIDDEN"
   "SERIALIZE-NAME"
   "SERVER"
   "SERVER-SOCKET"
@@ -541,15 +641,11 @@
   "SHOW-STATS"
   "SIGNATURE"
   "SILENT"
-  "SIMPLE"
   "SINGLE"
-  "SINGLE-RUN"
-  "SINGLETON"
   "SIZE"
   "SIZE-CHARS"
   "SIZE-PIXELS"
   "SKIP"
-  "SKIP-GROUP-DUPLICATES"
   "SLIDER"
   "SOAP-HEADER"
   "SOAP-HEADER-ENTRYREF"
@@ -558,10 +654,8 @@
   "SOURCE"
   "SOURCE-PROCEDURE"
   "SPACE"
-  "SQL"
   "STARTING"
   "STATUS"
-  "STDCALL"
   "STOP"
   "STOP-AFTER"
   "STORED-PROC"
@@ -569,13 +663,11 @@
   "STREAM"
   "STREAM-HANDLE"
   "STREAM-IO"
-  "STRETCH-TO-FIT"
   "STRING-XREF"
   "SUB-AVERAGE"
   "SUB-COUNT"
   "SUB-MAXIMUM"
   "SUB-MENU"
-  "SUB-MENU-HELP"
   "SUB-MINIMUM"
   "SUB-TOTAL"
   "SUBSCRIBE"
@@ -584,7 +676,6 @@
   "SYSTEM-HELP"
   "TABLE"
   "TABLE-HANDLE"
-  "TABLE-SCAN"
   "TARGET"
   "TARGET-PROCEDURE"
   "TEMP-TABLE"
@@ -596,7 +687,6 @@
   "THEN"
   "THIS-OBJECT"
   "THIS-PROCEDURE"
-  "THREAD-SAFE"
   "THROUGH"
   "THROW"
   "TIC-MARKS"
@@ -608,41 +698,29 @@
   "TOP"
   "TOPIC"
   "TOTAL"
-  "TRANSACTION"
   "TRANSACTION-MODE"
-  "TRANSPARENT"
   "TRIGGER"
   "TRIGGERS"
-  "TRIM"
   "TRUE"
   "TTCODEPAGE"
-  "UNBUFFERED"
   "UNDERLINE"
   "UNDERLINE-"
   "UNDO"
   "UNFORMATTED"
-  "UNIQUE"
-  "UNIQUE-MATCH"
   "UNIX"
-  "UNLESS-HIDDEN"
   "UNLOAD"
   "UNSUBSCRIBE"
   "UNTIL"
   "UP"
   "UPDATE"
   "USE"
-  "USE-FILENAME"
   "USE-INDEX"
-  "USE-REVVIDEO"
-  "USE-UNDERLINE"
-  "USE-WIDGET-POOL"
   "USING"
   "V6FRAME"
   "VALIDATE"
   "VALUE"
   "VAR"
   "VARIABLE"
-  "VERBOSE"
   "VERTICAL"
   "VIEW"
   "VIEW-AS"
@@ -657,7 +735,6 @@
   "WIDTH"
   "WINDOW"
   "WITH"
-  "WORD-INDEX"
   "WORK-TABLE"
   "WORKFILE"
   "WRITE"
