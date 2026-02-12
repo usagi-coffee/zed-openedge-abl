@@ -462,6 +462,7 @@
   "INPUT-OUTPUT"
   "INSERT"
   "INTERFACE"
+  "INFO"
   "INTO"
   "IS"
   "ITEM"
