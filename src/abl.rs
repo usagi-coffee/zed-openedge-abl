@@ -7,7 +7,6 @@ struct AblExtension {
 
 impl AblExtension {
     const VERSION_DIR_PREFIX: &'static str = "abl-language-server-";
-    const ASSET_URL_MARKER_FILE: &'static str = ".asset-download-url";
 
     fn is_file_or_symlink(path: &str) -> bool {
         fs::symlink_metadata(path).map_or(false, |stat| {
@@ -114,7 +113,6 @@ impl AblExtension {
         }
 
         let binary_path = format!("{version_dir}/{binary_name}");
-        let asset_url_marker_path = format!("{version_dir}/{}", Self::ASSET_URL_MARKER_FILE);
 
         // Check if we already have this version
         if let Some(cached_path) = &self.cached_binary_path {
@@ -125,12 +123,9 @@ impl AblExtension {
             }
         }
 
-        let has_matching_asset_url = fs::read_to_string(&asset_url_marker_path)
-            .map(|stored_url| stored_url.trim() == asset.download_url)
-            .unwrap_or(false);
-
-        // Download if we don't have this version, or if the asset backing this version changed.
-        if !Self::is_file_or_symlink(&binary_path) || !has_matching_asset_url {
+        // Always download the latest release asset. GitHub can keep a stable download URL
+        // when an asset is replaced under the same tag, so file existence alone is not enough.
+        {
             zed::set_language_server_installation_status(
                 language_server_id,
                 &zed::LanguageServerInstallationStatus::Downloading,
@@ -160,8 +155,6 @@ impl AblExtension {
             }
 
             zed::make_file_executable(&binary_path)?;
-            fs::write(&asset_url_marker_path, format!("{}\n", asset.download_url))
-                .map_err(|e| format!("failed to write asset marker file: {e}"))?;
 
             // Clean up old versions
             let entries =
