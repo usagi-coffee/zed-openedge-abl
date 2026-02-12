@@ -8,7 +8,7 @@ This is a language package for the [Zed](http://zed.dev) code editor that adds s
 
 # Installation
 
-Currently the only way to install the extension is to use Zed's `Install Dev Extension` with a [patched llvm/clang](https://github.com/llvm/llvm-project/pull/179722) as the extension faces a few problems:
+Currently the only way to install the extension is to use Zed's `Install Dev Extension` as the extension faces a few problems:
 
 - `tree-sitter-abl` is so big it needs to go below 100MB to be uploaded to github as cargo does not support `LFS`.
 - LLVM/Clang needs [patches](https://github.com/llvm/llvm-project/pull/179722) to compile `tree-sitter-abl`.
@@ -19,6 +19,7 @@ Only after these changes it will be posible to publish it to the extensions repo
 
 ```
 git clone https://github.com/usagi-coffee/zed-openedge-abl
+# Zed -> Extensions -> Install Dev Extension -> Select `zed-openedge-abl` directory
 ```
 
 # License
