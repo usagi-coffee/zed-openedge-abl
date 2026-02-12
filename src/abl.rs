@@ -123,9 +123,7 @@ impl AblExtension {
             }
         }
 
-        // Always download the latest release asset. GitHub can keep a stable download URL
-        // when an asset is replaced under the same tag, so file existence alone is not enough.
-        {
+        if !Self::is_file_or_symlink(&binary_path) {
             zed::set_language_server_installation_status(
                 language_server_id,
                 &zed::LanguageServerInstallationStatus::Downloading,
