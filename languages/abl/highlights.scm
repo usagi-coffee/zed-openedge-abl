@@ -5,9 +5,15 @@
 
 ; Constants
 (constant) @constant
-(include) @constant
-(file_name) @constant
-(preprocessor_directive) @preproc
+(include_file_reference) @constant
+(include_file_path) @constant
+[
+  (global_define_preprocessor_directive)
+  (scoped_define_preprocessor_directive)
+  (if_preprocessor_directive)
+  (message_preprocessor_directive)
+  (undefine_preprocessor_directive)
+] @preproc
 (null_literal) @constant
 (argument_reference) @constant
 (argument_reference) @constant.builtin
@@ -24,8 +30,8 @@
 (function_definition name: (identifier) @function)
 (function_forward_definition name: (identifier) @function)
 (procedure_definition name: (identifier) @function)
-(include_named_argument name: (identifier) @attribute)
-(include_named_argument name: (identifier) @parameter)
+(include_argument name: (identifier) @attribute)
+(include_argument name: (identifier) @parameter)
 (buffer_definition table: (identifier) @type)
 (buffer_definition table: (qualified_name) @type)
 (variable_definition
