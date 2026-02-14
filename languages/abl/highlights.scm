@@ -12,6 +12,20 @@
   (message_preprocessor_directive)
   (undefine_preprocessor_directive)
 ] @constant
+[
+  (if_branch)
+  (then_branch)
+  (elseif_branch)
+  (else_branch)
+  (endif_branch)
+] @constant
+
+(if_preprocessor_directive
+  (endif_branch) @constant
+  (#set! priority 500))
+(if_preprocessor_directive
+  (else_branch) @constant
+  (#set! priority 500))
 (global_define_preprocessor_directive name: (identifier) @constant)
 (scoped_define_preprocessor_directive name: (identifier) @constant)
 (undefine_preprocessor_directive name: (identifier) @constant)
@@ -235,6 +249,7 @@
   (retain_shape)
   (return_to_start_dir)
   (reverse_from)
+  (revert)
   (rounded)
   (row)
   (rule)
@@ -646,7 +661,6 @@
   "RETRY-CANCEL"
   "RETURN"
   "RETURNS"
-  "REVERT"
   "RIGHT"
   "RIGHT-ALIGNED"
   "ROUTINE-LEVEL"
@@ -793,3 +807,12 @@
   "YES-NO"
   "YES-NO-CANCEL"
 ] @keyword
+
+; Keep preprocessor branches constant even if keyword token captures apply later.
+[
+  (if_branch)
+  (then_branch)
+  (elseif_branch)
+  (else_branch)
+  (endif_branch)
+] @constant
