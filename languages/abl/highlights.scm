@@ -11,7 +11,7 @@
   (if_preprocessor_directive)
   (message_preprocessor_directive)
   (undefine_preprocessor_directive)
-] @preproc
+] @constant
 (global_define_preprocessor_directive name: (identifier) @constant)
 (scoped_define_preprocessor_directive name: (identifier) @constant)
 (undefine_preprocessor_directive name: (identifier) @constant)
