@@ -5,8 +5,6 @@
 
 ; Constants
 (constant) @constant
-(include_file_reference) @constant
-(include_file_path) @constant
 [
   (global_define_preprocessor_directive)
   (scoped_define_preprocessor_directive)
@@ -14,6 +12,17 @@
   (message_preprocessor_directive)
   (undefine_preprocessor_directive)
 ] @preproc
+(global_define_preprocessor_directive name: (identifier) @constant)
+(scoped_define_preprocessor_directive name: (identifier) @constant)
+(undefine_preprocessor_directive name: (identifier) @constant)
+(global_define_preprocessor_directive value: (preprocessor_value) @string.special)
+(scoped_define_preprocessor_directive value: (preprocessor_value) @string.special)
+(message_preprocessor_directive value: (preprocessor_value) @string.special)
+(preprocessor_name) @constant
+(preprocessor_name
+  (identifier) @constant
+  (#set! priority 140))
+(preprocessor_value) @string.special
 (null_literal) @constant
 (argument_reference) @constant
 (argument_reference) @constant.builtin
@@ -24,12 +33,35 @@
 (number_literal) @number
 (date_literal) @number
 (string_literal) @string
-(identifier) @variable
+((identifier) @variable
+  (#not-match? @variable "\\.")
+  (#not-match? @variable "^[A-Z][A-Z0-9_]*$"))
+(preprocessor_name) @constant
+(preprocessor_name
+  (identifier) @constant
+  (#set! priority 240))
+(include_file_path
+  (identifier) @variable
+  (#set! priority 250))
+(include_file_reference
+  "{"
+  @constant
+  "}"
+  @constant)
 
 ; Definitions
 (function_definition name: (identifier) @function)
 (function_forward_definition name: (identifier) @function)
 (procedure_definition name: (identifier) @function)
+(function_definition type: (_) @type)
+(function_forward_definition type: (_) @type)
+(parameter type: (_) @type)
+(parameter_definition type: (_) @type)
+(field type: (_) @type)
+(temp_table_definition name: (identifier) @type)
+(work_table_definition name: (identifier) @type)
+(workfile_definition name: (identifier) @type)
+(temp_table_field type: (_) @type)
 (include_argument name: (identifier) @attribute)
 (include_argument name: (identifier) @parameter)
 (buffer_definition table: (identifier) @type)
