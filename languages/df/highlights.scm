@@ -14,22 +14,23 @@
 
 ; Named entities
 (add_table_statement
-  table: (double_quoted_string) @type)
+  table: (string_literal) @type)
 
 (add_field_statement
-  field: (double_quoted_string) @property
-  table: (double_quoted_string) @type
-  type: (primitive_type) @type)
+  field: (string_literal) @property
+  table: (string_literal) @type
+  type: (type) @type)
 
 (add_index_statement
-  index: (double_quoted_string) @label
-  table: (double_quoted_string) @type)
+  index: (string_literal) @label
+  table: (string_literal) @type)
 
 ; Types and special values
-(primitive_type) @type
-(null_expression) @constant
+(type) @type
 (sort_order) @keyword
 
 ; Literals
-(double_quoted_string) @string
+(string_literal) @string
 (number_literal) @number
+(null_literal) @constant
+(date_literal) @constant

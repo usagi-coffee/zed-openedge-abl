@@ -17,4 +17,4 @@ rev = "2187c219652343ec6922dda0b822de7645705d87"
 
 [grammars.df]
 repository = "https://github.com/usagi-coffee/tree-sitter-df"
-rev = "ebf38d0765c84c6f7202bfd4a4033c47393d91b2"
+rev = "3e4800e83b749c780f13b8faa98040e73e518473"
