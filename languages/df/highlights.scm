@@ -3,9 +3,11 @@
 
 ; Core statements / directives
 [
+  (add_sequence_statement)
   (add_table_statement)
   (add_field_statement)
   (add_index_statement)
+  (sequence_tuning)
   (table_tuning)
   (field_tuning)
   (index_tuning)
@@ -13,6 +15,9 @@
 ] @keyword
 
 ; Named entities
+(add_sequence_statement
+  sequence: (string_literal) @label)
+
 (add_table_statement
   table: (string_literal) @type)
 
