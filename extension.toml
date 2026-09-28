@@ -13,7 +13,7 @@ language = "OpenEdge ABL"
 
 [grammars.abl]
 repository = "https://github.com/usagi-coffee/tree-sitter-abl"
-rev = "adc3befc4adf836cd42d4ca6d490b7cfdc714563"
+rev = "7f77bb15a458f36a5f918969de24076ff8b03553"
 
 [grammars.df]
 repository = "https://github.com/usagi-coffee/tree-sitter-df"

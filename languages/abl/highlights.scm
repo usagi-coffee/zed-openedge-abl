@@ -281,8 +281,6 @@
   (table_scan)
   (terminal)
   (text)
-  (this_object)
-  (this_procedure)
   (thread_safe)
   (three_d)
   (transaction)
@@ -428,7 +426,6 @@
   "END"
   "END-KEY"
   "ENDKEY"
-  "ENTRY"
   "ENUM"
   "EQ"
   "ERROR"
@@ -565,7 +562,6 @@
   "NO-CONSOLE"
   "NO-CURRENT-VALUE"
   "NO-DRAG"
-  "NO-ERROR"
   "NO-LABELS"
   "NO-LOCK"
   "NO-TAB-STOP"
@@ -595,7 +591,6 @@
   "OS-DIR"
   "OS-RENAME"
   "OTHERWISE"
-  "OUTER-JOIN"
   "OUTPUT"
   "OVERLAY"
   "PAGE"
